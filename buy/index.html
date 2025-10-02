@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buy Tickets</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#111827" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(()=>{});
+      });
+    }
+  </script>
+  <style>
+    body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin:0; background:#0b1220; color:#fff;}
+    .wrap{max-width:720px; margin:0 auto; padding:40px 20px;}
+    .card{background:#121a2b; border-radius:16px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,.25);}
+    label, select, input{display:block; width:100%; margin:8px 0;}
+    select, input{padding:10px; border-radius:8px; border:1px solid #334155; background:#0f172a; color:#fff;}
+    button{background:#22c55e; color:#0b1220; border:none; padding:12px 16px; border-radius:10px; margin-top:12px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Buy a Lift Ticket</h1>
+      <p>This is a placeholder. Hook this form to your real checkout (Stripe) later.</p>
+      <form action="#" method="POST" onsubmit="alert('Demo only. Wire to Stripe later.'); return false;">
+        <label for="mountain">Choose a mountain</label>
+        <select id="mountain" name="mountain">
+          <option>— Select —</option>
+          <option>Stowe</option>
+          <option>Jay Peak</option>
+          <option>Killington</option>
+          <option>Sugarbush</option>
+        </select>
+        <label for="email">Email for your ticket</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        <button type="submit">Continue to Payment</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
