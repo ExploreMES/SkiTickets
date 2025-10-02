@@ -1,8 +1,8 @@
 {
   "name": "SnowSeason Tickets",
   "short_name": "SnowSeason",
-  "start_url": "/buy/",
-  "scope": "/",
+  "start_url": "buy/",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#111827",
